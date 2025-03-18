@@ -1,0 +1,11 @@
+<resources>
+<string name="app_name">LR4</string>
+<string name="welcome_text">Bienvenue!</string>
+<string name="select_language">Sélectionnez la langue :</string>
+<string name="font_selection">Choisissez une police :</string>
+<string-array name="font_options">
+    <item>Roboto</item>
+    <item>Lobster</item>
+    <item>Open Sans</item>
+</string-array>
+</resources>

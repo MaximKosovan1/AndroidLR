@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LR4</string>
+    <string name="welcome_text">Ласкаво просимо!</string>
+    <string name="select_language">Оберіть мову:</string>
+    <string name="font_selection">Оберіть шрифт:</string>
+    <string-array name="font_options">
+        <item>Roboto</item>
+        <item>Lobster</item>
+        <item>Open Sans</item>
+    </string-array>
+</resources>
