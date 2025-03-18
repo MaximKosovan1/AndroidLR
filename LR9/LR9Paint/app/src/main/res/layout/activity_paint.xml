@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fitsSystemWindows="true">
+
+    <com.example.lr9paint.PaintView
+        android:id="@+id/paintView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF" />
+
+    <SeekBar
+        android:id="@+id/seekBarWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="50"
+        android:progress="6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnColorRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Червоний"
+            android:background="#FF0000"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnColorBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Синій"
+            android:background="#0000FF"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnColorGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Зелений"
+            android:background="#00FF00"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/editRGB"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="#RRGGBB"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnApplyRGB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Застосувати" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLoadImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Завантажити зображення" />
+
+    <Button
+        android:id="@+id/btnUndo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Відмінити" />
+
+    <Button
+        android:id="@+id/btnRedo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Повторити" />
+
+</LinearLayout>

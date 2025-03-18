@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LR9Paint</string>
+    <string name="painting_saved">Малюнок збережено</string>
+    <string name="menuitem_erase">Ластик</string>
+</resources>
