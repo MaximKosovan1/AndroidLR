@@ -1,5 +1,6 @@
 package com.example.lr2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -18,11 +19,14 @@ public class ActivityGame extends AppCompatActivity {
     private int currentQuestionIndex = 0;
     private int score = 0;
     private CountDownTimer timer;
+    private GameStatsDatabase db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        db = new GameStatsDatabase(this);
 
         tvParty = findViewById(R.id.tvParty);
         tvFact = findViewById(R.id.tvFact);
@@ -96,6 +100,8 @@ public class ActivityGame extends AppCompatActivity {
             timer.cancel();
         }
 
+        db.saveGameResult(score, questionList.size());
+
         tvParty.setVisibility(View.GONE);
         tvFact.setVisibility(View.GONE);
         btnYes.setVisibility(View.GONE);
@@ -103,7 +109,13 @@ public class ActivityGame extends AppCompatActivity {
 
         tvResult.setVisibility(View.VISIBLE);
         tvResult.setText("Гра завершена!\nТвій результат: " + score + " / " + questionList.size());
+
+        new android.os.Handler().postDelayed(() -> {
+            startActivity(new Intent(ActivityGame.this, ActivityStats.class));
+            finish();
+        }, 3000);
     }
+
 
     public class Question {
         private String party;
